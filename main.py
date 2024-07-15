@@ -50,10 +50,10 @@ Join @testbotbad For Updates
     check_if = await is_user_on_chat(bot, "@testbotbad", m.peer_id)
     if not check_if:
         return await m.reply("Please join @testbotbad then send me the link again.")
-    check_if = await is_user_on_chat(bot, "@testbotbadChats", m.peer_id)
+    check_if = await is_user_on_chat(bot, "@testbotbad", m.peer_id)
     if not check_if:
         return await m.reply(
-            "Please join @testbotbadChats then send me the link again."
+            "Please join @testbotbad then send me the link again."
         )
     await m.reply(reply_text, link_preview=False, parse_mode="markdown")
 
@@ -72,10 +72,10 @@ async def start(m: UpdateNewMessage):
     check_if = await is_user_on_chat(bot, "@testbotbad", m.peer_id)
     if not check_if:
         return await m.reply("Please join @testbotbad then send me the link again.")
-    check_if = await is_user_on_chat(bot, "@testbotbadChats", m.peer_id)
+    check_if = await is_user_on_chat(bot, "@testbotbad", m.peer_id)
     if not check_if:
         return await m.reply(
-            "Please join @testbotbadChats then send me the link again."
+            "Please join @testbotbad then send me the link again."
         )
     await bot(
         ForwardMessagesRequest(
@@ -129,10 +129,10 @@ async def handle_message(m: Message):
     check_if = await is_user_on_chat(bot, "@testbotbad", m.peer_id)
     if not check_if:
         return await m.reply("Please join @testbotbad then send me the link again.")
-    check_if = await is_user_on_chat(bot, "@testbotbadChats", m.peer_id)
+    check_if = await is_user_on_chat(bot, "@testbotbad", m.peer_id)
     if not check_if:
         return await m.reply(
-            "Please join @testbotbadChats then send me the link again."
+            "Please join @testbotbad then send me the link again."
         )
     is_spam = db.get(m.sender_id)
     if is_spam and m.sender_id not in [6352107773]:
@@ -316,3 +316,4 @@ Direct Link: [Click Here](https://t.me/teraboxdown_bot?start={uuid})
 
 bot.start(bot_token=BOT_TOKEN)
 bot.run_until_disconnected()
+        
