@@ -46,7 +46,7 @@ async def start(m: UpdateNewMessage):
 Hello! I am a bot to download videos from terabox.
 Send me the terabox link and I will start downloading it.
 Join @testbotbad For Updates
-[Source Code](GitHub/badhacker98) """
+[Source Code](https://github.com/Badhacker98?tab=repositories) """
     check_if = await is_user_on_chat(bot, "@testbotbad", m.peer_id)
     if not check_if:
         return await m.reply("Please join @testbotbad then send me the link again.")
@@ -135,7 +135,7 @@ async def handle_message(m: Message):
             "Please join @testbotbadChats then send me the link again."
         )
     is_spam = db.get(m.sender_id)
-    if is_spam and m.sender_id not in [1317173146]:
+    if is_spam and m.sender_id not in [6352107773]:
         return await m.reply("You are spamming. Please wait a 1 minute and try again.")
     hm = await m.reply("Sending you the media wait...")
     count = db.get(f"check_{m.sender_id}")
@@ -187,7 +187,7 @@ async def handle_message(m: Message):
         return await hm.edit(
             f"Sorry! File is not supported for now. I can download only .mp4, .mkv and .webm files."
         )
-    if int(data["sizebytes"]) > 524288000 and m.sender_id not in [1317173146]:
+    if int(data["sizebytes"]) > 524288000 and m.sender_id not in [6352107773]:
         return await hm.edit(
             f"Sorry! File is too big. I can download only 500MB and this file is of {data['size']} ."
         )
@@ -316,4 +316,3 @@ Direct Link: [Click Here](https://t.me/teraboxdown_bot?start={uuid})
 
 bot.start(bot_token=BOT_TOKEN)
 bot.run_until_disconnected()
-    
